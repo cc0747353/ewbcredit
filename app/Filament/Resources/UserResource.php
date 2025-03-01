@@ -13,6 +13,8 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
 
 class UserResource extends Resource
 {
@@ -46,7 +48,13 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('name')->searchable(),
+                TextColumn::make('email')->searchable(),
+                //created at
+                TextColumn::make('created_at')
+                ->sortable(),
+                IconColumn::make('is_admin')
+                ->boolean(),
             ])
             ->filters([
                 //
