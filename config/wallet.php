@@ -416,7 +416,7 @@ return [
          *
          * @see Transaction
          */
-        'model' => Transaction::class,
+        'model' => App\Models\Transaction::class,
     ],
 
     /**
@@ -443,7 +443,7 @@ return [
          *
          * @see Transfer
          */
-        'model' => Transfer::class,
+        'model' => App\Models\Transfer::class,
     ],
 
     /**
@@ -470,7 +470,7 @@ return [
          *
          * @see Wallet
          */
-        'model' => Wallet::class,
+        'model' => App\Models\Wallet::class,
 
         /**
          * The configuration options for creating wallets.
