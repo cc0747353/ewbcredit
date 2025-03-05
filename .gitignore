@@ -27,3 +27,4 @@
 # add the .history folder to the .gitignore file
 .history
 *.zip
+.env
